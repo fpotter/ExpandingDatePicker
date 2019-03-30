@@ -3,12 +3,12 @@
 
 import AppKit
 
-class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
+open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
     var panel: ExpandingDatePickerPanel!
 
     var preventExpansionOnBecomeFirstResponder = false
 
-    override func becomeFirstResponder() -> Bool {
+    override open func becomeFirstResponder() -> Bool {
         if preventExpansionOnBecomeFirstResponder {
             return super.becomeFirstResponder()
         } else {
@@ -96,7 +96,7 @@ class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
         return newEvent
     }
 
-    override func mouseDown(with event: NSEvent) {
+    override open func mouseDown(with event: NSEvent) {
         if window?.firstResponder === self && panel == nil {
             // To get to this state, the expandable date picker became the first responder,
             // it expanded, the user hit escape, and then focus went back to the plain textual
