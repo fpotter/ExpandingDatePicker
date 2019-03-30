@@ -25,6 +25,8 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerText.datePickerMode = .single
         datePickerText.datePickerStyle = .textField
         datePickerText.datePickerElements = .yearMonthDay
+        datePickerText.controlSize = sourceDatePicker.controlSize
+        datePickerText.font = sourceDatePicker.font
         datePickerText.sizeToFit()
         datePickerText.drawsBackground = false
         datePickerText.isBordered = false
