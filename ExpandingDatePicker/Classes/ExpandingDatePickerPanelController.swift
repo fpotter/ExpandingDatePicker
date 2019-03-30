@@ -14,10 +14,6 @@ class InternalDatePicker: NSDatePicker {
             super.keyDown(with: event)
         }
     }
-
-    override func insertNewline(_ sender: Any?) {
-        super.insertNewline(sender)
-    }
 }
 
 class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
