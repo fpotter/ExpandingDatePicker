@@ -1,11 +1,13 @@
 Pod::Spec.new do |s|
   s.name             = 'ExpandingDatePicker'
   s.version          = '0.1.0'
-  s.summary          = 'NSDatePicker that behaves like the date picker in Calendar.app'
+  s.summary          = 'A textual date picker that expands to show a graphical calendar view when focued.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+ExpandingDatePicker is a textual date picker that will expand to show a
+graphical date picker beneath it when focused.  It has the same styling
+as the expandable date picker Apple uses in Calendar.app.
+DESC
 
   s.homepage         = 'https://github.com/fpotter/ExpandingDatePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
