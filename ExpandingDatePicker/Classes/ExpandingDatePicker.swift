@@ -64,7 +64,7 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
 
         panel.makeKey()
 
-        isHidden = true
+        alphaValue = 0.0
     }
 
     private func convertEvent(event: NSEvent, toPanel: NSPanel) -> NSEvent {
@@ -113,7 +113,7 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
         panel.orderOut(self)
         panel = nil
 
-        isHidden = false
+        alphaValue = 1.0
 
         if refocusDatePicker {
             preventExpansionOnBecomeFirstResponder = true
