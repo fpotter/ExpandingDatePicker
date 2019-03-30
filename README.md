@@ -1,6 +1,6 @@
 # ExpandingDatePicker
 
-[![CI Status](https://img.shields.io/travis/Fred Potter/ExpandingDatePicker.svg?style=flat)](https://travis-ci.org/Fred Potter/ExpandingDatePicker)
+[![CI Status](https://img.shields.io/travis/fpotter/ExpandingDatePicker.svg?style=flat)](https://travis-ci.org/Fred Potter/ExpandingDatePicker)
 [![Version](https://img.shields.io/cocoapods/v/ExpandingDatePicker.svg?style=flat)](https://cocoapods.org/pods/ExpandingDatePicker)
 [![License](https://img.shields.io/cocoapods/l/ExpandingDatePicker.svg?style=flat)](https://cocoapods.org/pods/ExpandingDatePicker)
 [![Platform](https://img.shields.io/cocoapods/p/ExpandingDatePicker.svg?style=flat)](https://cocoapods.org/pods/ExpandingDatePicker)

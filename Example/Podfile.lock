@@ -1,0 +1,16 @@
+PODS:
+  - ExpandingDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - ExpandingDatePicker (from `../`)
+
+EXTERNAL SOURCES:
+  ExpandingDatePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ExpandingDatePicker: 24dbcb26a5719ef7b897b8c8f35c14c1da144477
+
+PODFILE CHECKSUM: 991d9b985e48c83f83fb0e16392870a9395dc729
+
+COCOAPODS: 1.5.3

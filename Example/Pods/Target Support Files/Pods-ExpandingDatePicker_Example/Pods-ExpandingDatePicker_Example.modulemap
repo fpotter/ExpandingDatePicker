@@ -1,0 +1,6 @@
+framework module Pods_ExpandingDatePicker_Example {
+  umbrella header "Pods-ExpandingDatePicker_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
