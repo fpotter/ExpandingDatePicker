@@ -4,7 +4,7 @@
 import AppKit
 
 class ExpandingDatePickerPanel: NSPanel {
-    weak var datePicker: ExpandingDatePicker?
+    weak var sourceDatePicker: ExpandingDatePicker?
 
     override var canBecomeKey: Bool {
         return true
@@ -12,24 +12,24 @@ class ExpandingDatePickerPanel: NSPanel {
 
     override func resignKey() {
         super.resignKey()
-        datePicker?.dismissExpandingPanel()
+        sourceDatePicker?.dismissExpandingPanel()
     }
 
     override func cancelOperation(_ sender: Any?) {
-        datePicker?.dismissExpandingPanel(refocusDatePicker: true)
+        sourceDatePicker?.dismissExpandingPanel(refocusDatePicker: true)
     }
 
     override func selectNextKeyView(_ sender: Any?) {
-        datePicker?.dismissExpandingPanel()
-        if let nextKeyView = datePicker?.nextKeyView {
-            datePicker?.window?.makeFirstResponder(nextKeyView)
+        sourceDatePicker?.dismissExpandingPanel()
+        if let nextKeyView = sourceDatePicker?.nextKeyView {
+            sourceDatePicker?.window?.makeFirstResponder(nextKeyView)
         }
     }
 
     override func selectPreviousKeyView(_ sender: Any?) {
-        datePicker?.dismissExpandingPanel()
-        if let previousKeyView = datePicker?.previousKeyView {
-            datePicker?.window?.makeFirstResponder(previousKeyView)
+        sourceDatePicker?.dismissExpandingPanel()
+        if let previousKeyView = sourceDatePicker?.previousKeyView {
+            sourceDatePicker?.window?.makeFirstResponder(previousKeyView)
         }
     }
 }

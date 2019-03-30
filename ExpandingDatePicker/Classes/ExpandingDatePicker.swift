@@ -41,7 +41,7 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
         panel.hidesOnDeactivate = false
         panel.isMovableByWindowBackground = false
         panel.contentViewController = controller
-        panel.datePicker = self
+        panel.sourceDatePicker = self
 
         // Unfortunatley, when this panel gets shown as a child window via
         // -[NSWindow addChildWindow:ordered:] and made key, the traffic lights in
