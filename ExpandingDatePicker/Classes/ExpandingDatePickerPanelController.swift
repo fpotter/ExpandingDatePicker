@@ -17,21 +17,21 @@ class InternalDatePicker: NSDatePicker {
 }
 
 class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
-    let datePickerText: InternalDatePicker
+    let datePickerTextual: InternalDatePicker
     let datePickerGraphical: NSDatePicker
 
     init(sourceDatePicker: ExpandingDatePicker) {
-        datePickerText = InternalDatePicker(frame: .zero)
-        datePickerText.datePickerMode = .single
-        datePickerText.datePickerStyle = .textField
-        datePickerText.datePickerElements = .yearMonthDay
-        datePickerText.controlSize = sourceDatePicker.controlSize
-        datePickerText.font = sourceDatePicker.font
-        datePickerText.sizeToFit()
-        datePickerText.drawsBackground = false
-        datePickerText.isBordered = false
-        datePickerText.isEnabled = true
-        datePickerText.expandingDatePicker = sourceDatePicker
+        datePickerTextual = InternalDatePicker(frame: .zero)
+        datePickerTextual.datePickerMode = .single
+        datePickerTextual.datePickerStyle = .textField
+        datePickerTextual.datePickerElements = .yearMonthDay
+        datePickerTextual.controlSize = sourceDatePicker.controlSize
+        datePickerTextual.font = sourceDatePicker.font
+        datePickerTextual.sizeToFit()
+        datePickerTextual.drawsBackground = false
+        datePickerTextual.isBordered = false
+        datePickerTextual.isEnabled = true
+        datePickerTextual.expandingDatePicker = sourceDatePicker
 
         datePickerGraphical = NSDatePicker(frame: .zero)
         datePickerGraphical.datePickerMode = .single
@@ -42,7 +42,7 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerGraphical.isBordered = false
         datePickerGraphical.isEnabled = true
 
-        datePickerText.bind(.value,
+        datePickerTextual.bind(.value,
                             to: sourceDatePicker,
                             withKeyPath: #keyPath(NSDatePicker.dateValue),
                             options: [
@@ -66,7 +66,7 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
     }
 
     override func loadView() {
-        let stack = NSStackView(views: [datePickerText, datePickerGraphical])
+        let stack = NSStackView(views: [datePickerTextual, datePickerGraphical])
         stack.spacing = 0
         stack.orientation = .vertical
         stack.alignment = .left
@@ -76,7 +76,7 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         stack.layoutSubtreeIfNeeded()
 
         let backdropView = ExpandingDatePickerPanelBackdropView(frame: stack.bounds,
-                                                                 datePickerTextual: datePickerText,
+                                                                 datePickerTextual: datePickerTextual,
                                                                  datePickerGraphical: datePickerGraphical)
         backdropView.addSubview(stack)
         view = backdropView
