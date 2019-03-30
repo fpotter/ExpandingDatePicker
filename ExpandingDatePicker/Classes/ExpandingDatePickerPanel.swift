@@ -2,7 +2,6 @@
 //  Copyright (c) 2019 Fred Potter. All rights reserved.
 
 import AppKit
-import ObjectiveC
 
 class ExpandingDatePickerPanel: NSPanel {
     weak var datePicker: ExpandingDatePicker?
