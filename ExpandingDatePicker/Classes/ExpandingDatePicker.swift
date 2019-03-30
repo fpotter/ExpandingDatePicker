@@ -121,5 +121,21 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
             preventExpansionOnBecomeFirstResponder = false
         }
     }
+
+    override open func viewWillDraw() {
+        super.viewWillDraw()
+
+        if datePickerMode != .single {
+            fatalError("ExpandableDatePicker's datePickerMode must be .single")
+        }
+
+        if datePickerStyle != .textField {
+            fatalError("ExpandableDatePicker's datePickerStyle must be .textField")
+        }
+
+        if datePickerElements != [.yearMonthDay] {
+            fatalError("ExpandableDatePicker's datePickerElements must be [.yearMonthDay]")
+        }
+    }
 }
 
