@@ -27,6 +27,9 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerTextual.datePickerElements = .yearMonthDay
         datePickerTextual.controlSize = sourceDatePicker.controlSize
         datePickerTextual.font = sourceDatePicker.font
+        datePickerTextual.calendar = sourceDatePicker.calendar
+        datePickerTextual.minDate = sourceDatePicker.minDate
+        datePickerTextual.maxDate = sourceDatePicker.maxDate
         datePickerTextual.sizeToFit()
         datePickerTextual.drawsBackground = false
         datePickerTextual.isBordered = false
@@ -41,6 +44,9 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerGraphical.drawsBackground = false
         datePickerGraphical.isBordered = false
         datePickerGraphical.isEnabled = true
+        datePickerGraphical.calendar = sourceDatePicker.calendar
+        datePickerGraphical.minDate = sourceDatePicker.minDate
+        datePickerGraphical.maxDate = sourceDatePicker.maxDate
 
         datePickerTextual.bind(.value,
                             to: sourceDatePicker,
