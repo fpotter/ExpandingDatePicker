@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ExpandingDatePicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="460"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="37" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-Ju-cjk">
-                                <rect key="frame" x="20" y="36" width="347" height="22"/>
+                                <rect key="frame" x="20" y="241" width="347" height="22"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-KE-leF">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="22"/>
@@ -765,7 +765,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-QI-Iid">
-                                <rect key="frame" x="20" y="98" width="440" height="137"/>
+                                <rect key="frame" x="20" y="303" width="440" height="137"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-FE-OZc">
                                         <rect key="frame" x="-2" y="120" width="89" height="17"/>
@@ -815,7 +815,7 @@
                                 </customSpacing>
                             </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-N7-bpP">
-                                <rect key="frame" x="71" y="11" width="144" height="17"/>
+                                <rect key="frame" x="71" y="216" width="144" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="yr9-rt-MmT"/>
                                 </constraints>
@@ -825,23 +825,83 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMr-Yk-ehh">
+                                <rect key="frame" x="20" y="162" width="440" height="34"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="L0x-In-pdZ">
+                                        <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
+                                        <textFieldCell key="cell" selectable="YES" title="4. Expanded date picker should use same control / font size as the source date picker." id="Xr6-ep-hcJ">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sJq-in-6hy" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                <rect key="frame" x="153" y="123" width="81" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="lKT-ep-sgZ"/>
+                                </constraints>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="CzF-hd-Y83">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                    </date>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </datePickerCell>
+                            </datePicker>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-FA-Rk7">
+                                <rect key="frame" x="20" y="86" width="440" height="17"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-WI-ZcS">
+                                        <rect key="frame" x="-2" y="0.0" width="312" height="17"/>
+                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper" id="v9D-Tv-IeC">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="u2K-Ju-cjk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="22D-ai-sZ9"/>
+                            <constraint firstItem="YMr-Yk-ehh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CnH-T7-fpH"/>
+                            <constraint firstItem="c2J-FA-Rk7" firstAttribute="top" secondItem="sJq-in-6hy" secondAttribute="bottom" constant="20" id="EYK-rq-n2h"/>
+                            <constraint firstItem="YMr-Yk-ehh" firstAttribute="top" secondItem="Je8-N7-bpP" secondAttribute="bottom" constant="20" id="FLO-7Z-qbN"/>
                             <constraint firstAttribute="trailing" secondItem="7y1-QI-Iid" secondAttribute="trailing" constant="20" id="FvF-l2-45B"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Je8-N7-bpP" secondAttribute="trailing" constant="20" symbolic="YES" id="Gp2-ej-tvy"/>
                             <constraint firstItem="7y1-QI-Iid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Tco-89-feJ"/>
+                            <constraint firstItem="c2J-FA-Rk7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="XYJ-3J-Ck5"/>
+                            <constraint firstAttribute="trailing" secondItem="YMr-Yk-ehh" secondAttribute="trailing" constant="20" id="eTd-KM-4Zq"/>
                             <constraint firstItem="Je8-N7-bpP" firstAttribute="top" secondItem="u2K-Ju-cjk" secondAttribute="bottom" constant="8" id="hTk-xI-OkY"/>
+                            <constraint firstItem="sJq-in-6hy" firstAttribute="top" secondItem="YMr-Yk-ehh" secondAttribute="bottom" constant="20" id="ipx-n1-zz7"/>
                             <constraint firstAttribute="trailing" secondItem="u2K-Ju-cjk" secondAttribute="trailing" constant="113" id="qvZ-aq-drH"/>
                             <constraint firstItem="Je8-N7-bpP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="73" id="sT2-3C-aUj"/>
                             <constraint firstItem="7y1-QI-Iid" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="szn-D7-6I8"/>
+                            <constraint firstItem="sJq-in-6hy" firstAttribute="leading" secondItem="Zz7-46-SGH" secondAttribute="leading" id="u0v-C7-abu"/>
+                            <constraint firstAttribute="trailing" secondItem="c2J-FA-Rk7" secondAttribute="trailing" constant="20" id="y5y-7X-Rn7"/>
                             <constraint firstItem="u2K-Ju-cjk" firstAttribute="top" secondItem="7y1-QI-Iid" secondAttribute="bottom" constant="40" id="zy4-zv-18j"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="647.5"/>
+            <point key="canvasLocation" x="75" y="750"/>
         </scene>
     </scenes>
 </document>
