@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ExpandingDatePicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="496"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="37" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-Ju-cjk">
-                                <rect key="frame" x="20" y="241" width="347" height="22"/>
+                                <rect key="frame" x="20" y="277" width="347" height="22"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-KE-leF">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="22"/>
@@ -765,7 +765,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-QI-Iid">
-                                <rect key="frame" x="20" y="303" width="440" height="137"/>
+                                <rect key="frame" x="20" y="339" width="440" height="137"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-FE-OZc">
                                         <rect key="frame" x="-2" y="120" width="89" height="17"/>
@@ -815,7 +815,7 @@
                                 </customSpacing>
                             </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-N7-bpP">
-                                <rect key="frame" x="71" y="216" width="144" height="17"/>
+                                <rect key="frame" x="71" y="252" width="144" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="yr9-rt-MmT"/>
                                 </constraints>
@@ -826,7 +826,7 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMr-Yk-ehh">
-                                <rect key="frame" x="20" y="162" width="440" height="34"/>
+                                <rect key="frame" x="20" y="198" width="440" height="34"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="L0x-In-pdZ">
                                         <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
@@ -845,12 +845,12 @@
                                 </customSpacing>
                             </stackView>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sJq-in-6hy" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="153" y="123" width="81" height="19"/>
+                                <rect key="frame" x="153" y="159" width="81" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="lKT-ep-sgZ"/>
                                 </constraints>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="CzF-hd-Y83">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
                                         <!--1982-02-12 16:00:00 +0000-->
                                     </date>
@@ -859,11 +859,11 @@
                                 </datePickerCell>
                             </datePicker>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-FA-Rk7">
-                                <rect key="frame" x="20" y="86" width="440" height="17"/>
+                                <rect key="frame" x="20" y="105" width="440" height="34"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-WI-ZcS">
-                                        <rect key="frame" x="-2" y="0.0" width="312" height="17"/>
-                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper" id="v9D-Tv-IeC">
+                                        <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
+                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper.  Date text should jump around on expansion." id="v9D-Tv-IeC">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -877,6 +877,66 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="OiM-EA-Iz3">
+                                <rect key="frame" x="51" y="33" width="385" height="62"/>
+                                <subviews>
+                                    <datePicker verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="B07-7h-oso" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                        <rect key="frame" x="0.0" y="19" width="107" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="031-9b-Dj2"/>
+                                        </constraints>
+                                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="xWb-4s-DXW">
+                                            <font key="font" metaFont="system"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                                <!--1982-02-12 16:00:00 +0000-->
+                                            </date>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </datePickerCell>
+                                    </datePicker>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-A1-1is">
+                                        <rect key="frame" x="0.0" y="45" width="74" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="with Border" id="eSr-gz-nib">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-Cj-Z1F">
+                                        <rect key="frame" x="182" y="45" width="94" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="without Border" id="RE9-qd-pVT">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-TZ-6Ld" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                        <rect key="frame" x="184" y="19" width="107" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="DvI-no-C5N"/>
+                                        </constraints>
+                                        <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="On6-Qa-Ktn">
+                                            <font key="font" metaFont="system"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                                <!--1982-02-12 16:00:00 +0000-->
+                                            </date>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </datePickerCell>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2nU-Cj-Z1F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mKe-A1-1is" secondAttribute="trailing" constant="8" symbolic="YES" id="21d-lp-erW"/>
+                                    <constraint firstItem="mKe-A1-1is" firstAttribute="top" secondItem="OiM-EA-Iz3" secondAttribute="top" id="55e-32-QyJ"/>
+                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="top" secondItem="OiM-EA-Iz3" secondAttribute="top" constant="20" id="BGV-rf-N0A"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbA-TZ-6Ld" secondAttribute="trailing" constant="97" id="PWr-AM-rsQ"/>
+                                    <constraint firstItem="mKe-A1-1is" firstAttribute="leading" secondItem="OiM-EA-Iz3" secondAttribute="leading" constant="2" id="STl-HF-1hg"/>
+                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="baseline" secondItem="B07-7h-oso" secondAttribute="baseline" id="THV-o9-J7R"/>
+                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="leading" secondItem="B07-7h-oso" secondAttribute="trailing" constant="80" id="aaa-kR-qqD"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nU-Cj-Z1F" secondAttribute="trailing" constant="111" id="hCW-qy-0on"/>
+                                    <constraint firstItem="mKe-A1-1is" firstAttribute="baseline" secondItem="2nU-Cj-Z1F" secondAttribute="baseline" id="s7w-1b-r1i"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="u2K-Ju-cjk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="22D-ai-sZ9"/>
@@ -885,11 +945,15 @@
                             <constraint firstItem="YMr-Yk-ehh" firstAttribute="top" secondItem="Je8-N7-bpP" secondAttribute="bottom" constant="20" id="FLO-7Z-qbN"/>
                             <constraint firstAttribute="trailing" secondItem="7y1-QI-Iid" secondAttribute="trailing" constant="20" id="FvF-l2-45B"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Je8-N7-bpP" secondAttribute="trailing" constant="20" symbolic="YES" id="Gp2-ej-tvy"/>
+                            <constraint firstAttribute="bottom" secondItem="OiM-EA-Iz3" secondAttribute="bottom" constant="33" id="TEU-ry-dH7"/>
                             <constraint firstItem="7y1-QI-Iid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Tco-89-feJ"/>
                             <constraint firstItem="c2J-FA-Rk7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="XYJ-3J-Ck5"/>
+                            <constraint firstItem="OiM-EA-Iz3" firstAttribute="top" secondItem="c2J-FA-Rk7" secondAttribute="bottom" constant="10" id="Zqe-h5-HUg"/>
                             <constraint firstAttribute="trailing" secondItem="YMr-Yk-ehh" secondAttribute="trailing" constant="20" id="eTd-KM-4Zq"/>
                             <constraint firstItem="Je8-N7-bpP" firstAttribute="top" secondItem="u2K-Ju-cjk" secondAttribute="bottom" constant="8" id="hTk-xI-OkY"/>
                             <constraint firstItem="sJq-in-6hy" firstAttribute="top" secondItem="YMr-Yk-ehh" secondAttribute="bottom" constant="20" id="ipx-n1-zz7"/>
+                            <constraint firstItem="OiM-EA-Iz3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="51" id="kH9-ti-4rW"/>
+                            <constraint firstAttribute="trailing" secondItem="OiM-EA-Iz3" secondAttribute="trailing" constant="44" id="kdi-0B-sf0"/>
                             <constraint firstAttribute="trailing" secondItem="u2K-Ju-cjk" secondAttribute="trailing" constant="113" id="qvZ-aq-drH"/>
                             <constraint firstItem="Je8-N7-bpP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="73" id="sT2-3C-aUj"/>
                             <constraint firstItem="7y1-QI-Iid" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="szn-D7-6I8"/>
@@ -901,7 +965,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="750"/>
+            <point key="canvasLocation" x="75" y="768"/>
         </scene>
     </scenes>
 </document>

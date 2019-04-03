@@ -20,13 +20,18 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
     func displayPanel() {
         assert(panel == nil)
         let controller = ExpandingDatePickerPanelController(sourceDatePicker: self)
-
-        let datePickerMinXMaxYAsScreenPoint = window!.convertToScreen(
-            convert(NSRect(x: 0, y: bounds.maxY, width: 0, height: 0), to: nil)).origin
         let controllerViewSize = controller.view.frame.size
 
-        let panelContentRect = NSRect(x: datePickerMinXMaxYAsScreenPoint.x,
-                                      y: datePickerMinXMaxYAsScreenPoint.y - controllerViewSize.height,
+        let frameInWindow = convert(bounds, to: nil)
+        let frameInScreen = window!.convertToScreen(frameInWindow)
+        let distanceFromTopOfControllerViewToBottomEdgeOfTextualPicker =
+            (controller.view.frame.height - controller.datePickerTextual.frame.minY)
+
+        // Make the bottom edge of the textual date picker in the panel line up exactly
+        // with the bottom edge of the source date picker. This way, the text won't appear
+        // to jump around on expansion.
+        let panelContentRect = NSRect(x: frameInScreen.minX,
+                                      y: frameInScreen.minY - controllerViewSize.height + distanceFromTopOfControllerViewToBottomEdgeOfTextualPicker,
                                       width: controllerViewSize.width,
                                       height: controllerViewSize.height)
 
@@ -129,7 +134,7 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
             fatalError("ExpandableDatePicker's datePickerMode must be .single")
         }
 
-        if datePickerStyle != .textField {
+        if datePickerStyle != .textField && datePickerStyle != .textFieldAndStepper {
             fatalError("ExpandableDatePicker's datePickerStyle must be .textField")
         }
 
