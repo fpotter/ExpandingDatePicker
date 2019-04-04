@@ -28,6 +28,7 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerTextual.controlSize = sourceDatePicker.controlSize
         datePickerTextual.font = sourceDatePicker.font
         datePickerTextual.calendar = sourceDatePicker.calendar
+        datePickerTextual.timeZone = sourceDatePicker.timeZone
         datePickerTextual.minDate = sourceDatePicker.minDate
         datePickerTextual.maxDate = sourceDatePicker.maxDate
         datePickerTextual.sizeToFit()
@@ -45,6 +46,7 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         datePickerGraphical.isBordered = false
         datePickerGraphical.isEnabled = true
         datePickerGraphical.calendar = sourceDatePicker.calendar
+        datePickerGraphical.timeZone = sourceDatePicker.timeZone
         datePickerGraphical.minDate = sourceDatePicker.minDate
         datePickerGraphical.maxDate = sourceDatePicker.maxDate
 
