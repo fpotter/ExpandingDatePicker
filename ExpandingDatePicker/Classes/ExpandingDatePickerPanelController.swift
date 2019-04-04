@@ -55,7 +55,6 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
                                 NSBindingOption.raisesForNotApplicableKeys: true,
                                 NSBindingOption.continuouslyUpdatesValue: true,
             ])
-
         datePickerGraphical.bind(.value,
                                  to: sourceDatePicker,
                                  withKeyPath: #keyPath(NSDatePicker.dateValue),
@@ -63,6 +62,29 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
                                     NSBindingOption.raisesForNotApplicableKeys: true,
                                     NSBindingOption.continuouslyUpdatesValue: true,
             ])
+
+        // Replicate any bindings so that changing the date will immediately update
+        // the bounded obj+keyPath.
+        for bindingName in sourceDatePicker.exposedBindings {
+            guard let bindingInfo = sourceDatePicker.infoForBinding(bindingName) else {
+                continue
+            }
+
+            guard let keyPath = bindingInfo[.observedKeyPath] as? String,
+                let object = bindingInfo[.observedObject] else {
+                    continue
+            }
+            let options = bindingInfo[.options] as? [NSBindingOption: Any]
+
+            datePickerTextual.bind(bindingName,
+                                   to: object,
+                                   withKeyPath: keyPath,
+                                   options: options)
+            datePickerGraphical.bind(bindingName,
+                                   to: object,
+                                   withKeyPath: keyPath,
+                                   options: options)
+        }
 
         super.init(nibName: nil, bundle: nil)
     }

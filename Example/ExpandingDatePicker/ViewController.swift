@@ -9,6 +9,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @objc dynamic var date: Date = { Calendar.current.date(from: DateComponents(year: 2019, month: 1, day: 1))!}()
+    {
+        didSet {
+            print("Date set: \(date)")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

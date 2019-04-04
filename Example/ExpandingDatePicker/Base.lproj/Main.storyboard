@@ -737,6 +737,9 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </datePickerCell>
+                                        <connections>
+                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="M9h-fR-3P3"/>
+                                        </connections>
                                     </datePicker>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-f7-7Ox">
                                         <rect key="frame" x="251" y="0.0" width="96" height="22"/>
@@ -857,6 +860,9 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </datePickerCell>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="VaO-Xh-ids"/>
+                                </connections>
                             </datePicker>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-FA-Rk7">
                                 <rect key="frame" x="20" y="105" width="440" height="34"/>
@@ -893,6 +899,9 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </datePickerCell>
+                                        <connections>
+                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="sxk-jW-wIk"/>
+                                        </connections>
                                     </datePicker>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-A1-1is">
                                         <rect key="frame" x="0.0" y="45" width="74" height="17"/>
@@ -923,6 +932,9 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </datePickerCell>
+                                        <connections>
+                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="B7Z-5i-93j"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -964,6 +976,7 @@
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="qWh-xj-waD"/>
             </objects>
             <point key="canvasLocation" x="75" y="768"/>
         </scene>
