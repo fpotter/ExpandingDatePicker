@@ -738,6 +738,7 @@
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </datePickerCell>
                                         <connections>
+                                            <action selector="firstDatePickerChanged:" target="XfG-lQ-9wD" id="XXb-Xh-Pif"/>
                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="M9h-fR-3P3"/>
                                         </connections>
                                     </datePicker>
@@ -974,6 +975,9 @@
                             <constraint firstItem="u2K-Ju-cjk" firstAttribute="top" secondItem="7y1-QI-Iid" secondAttribute="bottom" constant="40" id="zy4-zv-18j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstDatePicker" destination="Zz7-46-SGH" id="sJV-Ny-wrs"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="qWh-xj-waD"/>

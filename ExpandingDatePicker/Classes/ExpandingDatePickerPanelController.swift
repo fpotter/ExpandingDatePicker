@@ -17,10 +17,13 @@ class InternalDatePicker: NSDatePicker {
 }
 
 class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
+    let sourceDatePicker: ExpandingDatePicker
     let datePickerTextual: InternalDatePicker
     let datePickerGraphical: NSDatePicker
 
     init(sourceDatePicker: ExpandingDatePicker) {
+        self.sourceDatePicker = sourceDatePicker
+
         datePickerTextual = InternalDatePicker(frame: .zero)
         datePickerTextual.datePickerMode = .single
         datePickerTextual.datePickerStyle = .textField
@@ -89,6 +92,11 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
         }
 
         super.init(nibName: nil, bundle: nil)
+
+        datePickerTextual.target = self
+        datePickerTextual.action = #selector(dateChanged(_:))
+        datePickerGraphical.target = self
+        datePickerGraphical.action = #selector(dateChanged(_:))
     }
 
     required init?(coder: NSCoder) {
@@ -110,6 +118,16 @@ class ExpandingDatePickerPanelController: NSViewController, CALayerDelegate {
                                                                  datePickerGraphical: datePickerGraphical)
         backdropView.addSubview(stack)
         view = backdropView
+    }
+
+    @objc
+    func dateChanged(_ sender: NSDatePicker) {
+        guard let target = sourceDatePicker.target,
+            let action = sourceDatePicker.action else {
+                return
+        }
+
+        let _ = target.perform(action, with: sourceDatePicker)
     }
 }
 

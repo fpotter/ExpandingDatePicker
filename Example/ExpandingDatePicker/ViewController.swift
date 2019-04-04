@@ -9,11 +9,18 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet weak var firstDatePicker: NSDatePicker!
+
     @objc dynamic var date: Date = { Calendar.current.date(from: DateComponents(year: 2019, month: 1, day: 1))!}()
     {
         didSet {
             print("Date set: \(date)")
         }
+    }
+
+    @IBAction func firstDatePickerChanged(_ sender: NSDatePicker) {
+        assert(sender === firstDatePicker)
+        print("first date picker changed: \(sender.dateValue)")
     }
 
     override func viewDidLoad() {
