@@ -870,7 +870,7 @@
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-WI-ZcS">
                                         <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
-                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper.  Date text should jump around on expansion." id="v9D-Tv-IeC">
+                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper.  Date text should not jump around on expansion." id="v9D-Tv-IeC">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
