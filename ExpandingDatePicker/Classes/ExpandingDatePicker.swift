@@ -102,6 +102,10 @@ open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
     }
 
     override open func mouseDown(with event: NSEvent) {
+        guard isEnabled else {
+            return
+        }
+
         if window?.firstResponder === self && panel == nil {
             // To get to this state, the expandable date picker became the first responder,
             // it expanded, the user hit escape, and then focus went back to the plain textual
