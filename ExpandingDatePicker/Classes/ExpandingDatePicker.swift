@@ -11,9 +11,17 @@ open class ExpandingDatePicker: NSDatePicker {
     override open func becomeFirstResponder() -> Bool {
         if isRefocusingToSourceDatePicker {
             return super.becomeFirstResponder()
-        } else {
+        }
+
+        if window?.isVisible ?? false {
             displayPanel()
             return false
+        } else {
+            // Our window isn't key yet but we're being made the first responder, which means there
+            // was no user-interaction that made us first responder.  It's most likely just the nib
+            // loading.  In any case, we only care to expand on a real user-interaction, which this
+            // isn't so just let the plain, unexpanded date picker take focus.
+            return super.becomeFirstResponder()
         }
     }
 
