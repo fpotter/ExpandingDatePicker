@@ -11,14 +11,6 @@ ExpandingDatePicker is a textual date picker that will expand to show a
 graphical date picker beneath it when focused.  It has the same styling
 as the expandable date picker Apple uses in Calendar.app.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-Deployment target of macOS 10.10+
-
 ## Installation
 
 ExpandingDatePicker is available through [CocoaPods](https://cocoapods.org). To install
@@ -27,6 +19,37 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ExpandingDatePicker'
 ```
+
+## Usage (Programmatic)
+
+`ExpandingDatePicker` extends `NSDatePicker` so the API is the same.  Only catch is that it only works for year/month/day elements, in single picker mode, and in textField or textFieldWithStepper styles.
+
+```swift
+import ExpandingDatePicker
+
+…
+
+let datePicker = ExpandingDatePicker(frame: .zero)
+// Required settings...
+datePicker.datePickerElements = .yearMonthDay
+datePicker.datePickerMode = .single
+datePicker.datePickerStyle = .textField
+datePicker.sizeToFit()
+
+…
+
+view.addSubview(datePicker)
+```
+
+### Usage (Interface Builder)
+
+Use the _Library_ to add a _Date Picker_ to your view.  In the _Identity Inspector_ panel, set the custom class to `ExpandingDatePicker`.
+
+
+
+## Requirements
+
+Deployment target of macOS 10.10+, though it has only been tested on 10.14.
 
 ## Known Issues
 
