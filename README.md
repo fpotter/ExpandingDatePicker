@@ -41,7 +41,7 @@ datePicker.sizeToFit()
 view.addSubview(datePicker)
 ```
 
-### Usage (Interface Builder)
+## Usage (Interface Builder)
 
 Use the _Library_ to add a _Date Picker_ to your view.  In the _Identity Inspector_ panel, set the custom class to `ExpandingDatePicker`.
 
