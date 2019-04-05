@@ -6,10 +6,10 @@ import AppKit
 open class ExpandingDatePicker: NSDatePicker {
     var panel: ExpandingDatePickerPanel!
 
-    var preventExpansionOnBecomeFirstResponder = false
+    var isRefocusingToSourceDatePicker = false
 
     override open func becomeFirstResponder() -> Bool {
-        if preventExpansionOnBecomeFirstResponder {
+        if isRefocusingToSourceDatePicker {
             return super.becomeFirstResponder()
         } else {
             displayPanel()
@@ -125,9 +125,9 @@ open class ExpandingDatePicker: NSDatePicker {
         alphaValue = 1.0
 
         if refocusDatePicker {
-            preventExpansionOnBecomeFirstResponder = true
+            isRefocusingToSourceDatePicker = true
             window?.makeFirstResponder(self)
-            preventExpansionOnBecomeFirstResponder = false
+            isRefocusingToSourceDatePicker = false
         }
     }
 
