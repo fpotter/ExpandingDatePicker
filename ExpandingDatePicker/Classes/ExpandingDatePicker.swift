@@ -13,11 +13,15 @@ open class ExpandingDatePicker: NSDatePicker {
             return super.becomeFirstResponder()
         }
 
-        guard window?.isVisible ?? false else {
-            // Our window isn't key yet but we're being made the first responder, which means there
-            // was no user-interaction that made us first responder.  It's most likely just the nib
-            // loading.  In any case, we only care to expand on a real user-interaction, which this
-            // isn't so just let the plain, unexpanded date picker take focus.
+        guard let window = self.window else {
+            return super.becomeFirstResponder()
+        }
+
+        if !window.isKeyWindow || !window.isVisible {
+            // Our window isn't key and visible yet but we're being made the first responder, which
+            // means there was no user-interaction that made us first responder.  It's most likely just
+            // the nib loading.  In any case, we only care to expand on a real user-interaction, which
+            // this isn't so just let the plain, unexpanded date picker take focus.
             return super.becomeFirstResponder()
         }
 
