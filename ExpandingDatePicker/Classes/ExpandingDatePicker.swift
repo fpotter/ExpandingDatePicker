@@ -3,7 +3,7 @@
 
 import AppKit
 
-open class ExpandingDatePicker: NSDatePicker, NSWindowDelegate {
+open class ExpandingDatePicker: NSDatePicker {
     var panel: ExpandingDatePickerPanel!
 
     var preventExpansionOnBecomeFirstResponder = false
