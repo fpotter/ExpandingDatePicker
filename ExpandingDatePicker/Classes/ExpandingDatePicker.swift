@@ -4,7 +4,7 @@
 import AppKit
 
 open class ExpandingDatePicker: NSDatePicker {
-    var panel: ExpandingDatePickerPanel!
+    var panel: ExpandingDatePickerPanel?
 
     var isRefocusingToSourceDatePicker = false
 
@@ -46,7 +46,7 @@ open class ExpandingDatePicker: NSDatePicker {
                                       width: controllerViewSize.width,
                                       height: controllerViewSize.height)
 
-        panel = ExpandingDatePickerPanel(
+        let panel = ExpandingDatePickerPanel(
             contentRect: panelContentRect,
             styleMask: .borderless,
             backing: .buffered,
@@ -79,6 +79,7 @@ open class ExpandingDatePicker: NSDatePicker {
         window?.addChildWindow(panel, ordered: .above)
 
         panel.makeKey()
+        self.panel = panel
 
         alphaValue = 0.0
     }
@@ -129,8 +130,8 @@ open class ExpandingDatePicker: NSDatePicker {
     }
 
     func dismissExpandingPanel(refocusDatePicker: Bool = false) {
-        window?.removeChildWindow(panel)
-        panel.orderOut(self)
+        window?.removeChildWindow(panel!)
+        panel!.orderOut(self)
         panel = nil
 
         alphaValue = 1.0
