@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
@@ -707,96 +707,72 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ExpandingDatePicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="577"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="509"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="37" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2K-Ju-cjk">
-                                <rect key="frame" x="20" y="358" width="347" height="22"/>
-                                <subviews>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-KE-leF">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="96" id="viK-wF-1SG"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Other Field" drawsBackground="YES" id="315-Qy-54x">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zz7-46-SGH" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                        <rect key="frame" x="133" y="0.0" width="81" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="rB0-99-16X"/>
-                                        </constraints>
-                                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="BbB-J5-Sco">
-                                            <font key="font" metaFont="system"/>
-                                            <date key="date" timeIntervalSinceReferenceDate="-595929600">
-                                                <!--1982-02-12 16:00:00 +0000-->
-                                            </date>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        </datePickerCell>
-                                        <connections>
-                                            <action selector="firstDatePickerChanged:" target="XfG-lQ-9wD" id="XXb-Xh-Pif"/>
-                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="M9h-fR-3P3"/>
-                                        </connections>
-                                    </datePicker>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-f7-7Ox">
-                                        <rect key="frame" x="251" y="0.0" width="96" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="96" id="sKq-Le-217"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Other Field" drawsBackground="YES" id="lvR-yM-G43">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Zz7-46-SGH" firstAttribute="centerX" secondItem="u2K-Ju-cjk" secondAttribute="centerX" id="CVv-09-QAb"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
+                            <datePicker verticalHuggingPriority="750" id="Zz7-46-SGH" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                <rect key="frame" x="163" y="310" width="81" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="BbB-J5-Sco">
+                                    <font key="font" metaFont="system"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="-595929600">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                    </date>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                </datePickerCell>
+                                <connections>
+                                    <action selector="firstDatePickerChanged:" target="XfG-lQ-9wD" id="XXb-Xh-Pif"/>
+                                    <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="M9h-fR-3P3"/>
+                                </connections>
+                            </datePicker>
+                            <textField verticalHuggingPriority="750" id="Tld-f7-7Ox">
+                                <rect key="frame" x="286" y="310" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Other Field" drawsBackground="YES" id="lvR-yM-G43">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="37" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="u2K-Ju-cjk">
+                                <rect key="frame" x="20" y="290" width="347" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-QI-Iid">
-                                <rect key="frame" x="20" y="420" width="440" height="137"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="7y1-QI-Iid">
+                                <rect key="frame" x="20" y="352" width="440" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Tgu-FE-OZc">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="Tgu-FE-OZc">
                                         <rect key="frame" x="-2" y="120" width="89" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="Test Cases —" id="whZ-Ge-Zcx">
                                             <font key="font" metaFont="systemMedium" size="13"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="vAN-dg-zxn">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="vAN-dg-zxn">
                                         <rect key="frame" x="-2" y="80" width="444" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="1. Should be able to Tab and Shift-Tab between fields — the expanding date picker should not break the flow." id="b4F-Wx-MLP">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ayt-Nc-72f">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="ayt-Nc-72f">
                                         <rect key="frame" x="-2" y="40" width="444" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="2. Clicking on the Month/Day/Year component in the date field should expand the date field and select that component." id="rMT-8n-cI3">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-ws-BFb">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="9W8-ws-BFb">
                                         <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" id="XTB-Hw-s8T">
                                             <font key="font" metaFont="system"/>
                                             <string key="title">3. Pressing Escape or Return while date field is expanded should colllapse the date field and return focus to the plain textual date field.</string>
@@ -818,22 +794,22 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-N7-bpP">
-                                <rect key="frame" x="71" y="333" width="144" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="yr9-rt-MmT"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Click Here To Test  ⤴" id="Upe-pS-a2m">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Je8-N7-bpP">
+                                <rect key="frame" x="18" y="312" width="144" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Click Here To Test  →" id="Upe-pS-a2m">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMr-Yk-ehh">
-                                <rect key="frame" x="20" y="279" width="440" height="34"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="YMr-Yk-ehh">
+                                <rect key="frame" x="20" y="248" width="440" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="L0x-In-pdZ">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="L0x-In-pdZ">
                                         <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="4. Expanded date picker should use same control / font size as the source date picker." id="Xr6-ep-hcJ">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -848,11 +824,9 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sJq-in-6hy" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="153" y="240" width="81" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="81" id="lKT-ep-sgZ"/>
-                                </constraints>
+                            <datePicker verticalHuggingPriority="750" id="sJq-in-6hy" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                <rect key="frame" x="153" y="209" width="81" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="CzF-hd-Y83">
                                     <font key="font" metaFont="smallSystem"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -865,11 +839,13 @@
                                     <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="VaO-Xh-ids"/>
                                 </connections>
                             </datePicker>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-FA-Rk7">
-                                <rect key="frame" x="20" y="186" width="440" height="34"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="c2J-FA-Rk7">
+                                <rect key="frame" x="20" y="155" width="440" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-WI-ZcS">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="4Mm-WI-ZcS">
                                         <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper.  Date text should not jump around on expansion." id="v9D-Tv-IeC">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -884,14 +860,13 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="OiM-EA-Iz3">
-                                <rect key="frame" x="51" y="126" width="385" height="50"/>
+                            <customView id="OiM-EA-Iz3">
+                                <rect key="frame" x="51" y="95" width="385" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <datePicker verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="B07-7h-oso" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                    <datePicker verticalHuggingPriority="1000" id="B07-7h-oso" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
                                         <rect key="frame" x="0.0" y="7" width="107" height="27"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="031-9b-Dj2"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="xWb-4s-DXW">
                                             <font key="font" metaFont="system"/>
                                             <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -904,27 +879,27 @@
                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="sxk-jW-wIk"/>
                                         </connections>
                                     </datePicker>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-A1-1is">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mKe-A1-1is">
                                         <rect key="frame" x="0.0" y="33" width="74" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="with Border" id="eSr-gz-nib">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-Cj-Z1F">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2nU-Cj-Z1F">
                                         <rect key="frame" x="182" y="33" width="94" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="without Border" id="RE9-qd-pVT">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-TZ-6Ld" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                    <datePicker verticalHuggingPriority="750" id="vbA-TZ-6Ld" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
                                         <rect key="frame" x="184" y="7" width="107" height="27"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="DvI-no-C5N"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="On6-Qa-Ktn">
                                             <font key="font" metaFont="system"/>
                                             <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -938,24 +913,14 @@
                                         </connections>
                                     </datePicker>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="2nU-Cj-Z1F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mKe-A1-1is" secondAttribute="trailing" constant="8" symbolic="YES" id="21d-lp-erW"/>
-                                    <constraint firstAttribute="height" constant="50" id="2V0-8Q-Em2"/>
-                                    <constraint firstItem="mKe-A1-1is" firstAttribute="top" secondItem="OiM-EA-Iz3" secondAttribute="top" id="55e-32-QyJ"/>
-                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="top" secondItem="OiM-EA-Iz3" secondAttribute="top" constant="20" id="BGV-rf-N0A"/>
-                                    <constraint firstAttribute="trailing" secondItem="vbA-TZ-6Ld" secondAttribute="trailing" constant="97" id="PWr-AM-rsQ"/>
-                                    <constraint firstItem="mKe-A1-1is" firstAttribute="leading" secondItem="OiM-EA-Iz3" secondAttribute="leading" constant="2" id="STl-HF-1hg"/>
-                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="baseline" secondItem="B07-7h-oso" secondAttribute="baseline" id="THV-o9-J7R"/>
-                                    <constraint firstItem="vbA-TZ-6Ld" firstAttribute="leading" secondItem="B07-7h-oso" secondAttribute="trailing" constant="80" id="aaa-kR-qqD"/>
-                                    <constraint firstAttribute="trailing" secondItem="2nU-Cj-Z1F" secondAttribute="trailing" constant="111" id="hCW-qy-0on"/>
-                                    <constraint firstItem="mKe-A1-1is" firstAttribute="baseline" secondItem="2nU-Cj-Z1F" secondAttribute="baseline" id="s7w-1b-r1i"/>
-                                </constraints>
                             </customView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-EA-b02">
-                                <rect key="frame" x="20" y="101" width="440" height="17"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="CeI-EA-b02">
+                                <rect key="frame" x="20" y="70" width="440" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="neW-p9-qXL">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="neW-p9-qXL">
                                         <rect key="frame" x="-2" y="0.0" width="343" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" selectable="YES" title="6. If control is diabled, clicking into it should do nothing." id="O4v-EE-GdL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -970,11 +935,9 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tLO-JJ-PbD" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="153" y="62" width="100" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="eaw-d4-m7r"/>
-                                </constraints>
+                            <datePicker verticalHuggingPriority="750" id="tLO-JJ-PbD" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
+                                <rect key="frame" x="153" y="31" width="100" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" enabled="NO" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="HDK-dc-fqc">
                                     <font key="font" metaFont="system"/>
                                     <date key="date" timeIntervalSinceReferenceDate="-595929600">
@@ -992,33 +955,6 @@
                                 </connections>
                             </datePicker>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="u2K-Ju-cjk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="22D-ai-sZ9"/>
-                            <constraint firstItem="CeI-EA-b02" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="2g8-df-BWx"/>
-                            <constraint firstItem="YMr-Yk-ehh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="CnH-T7-fpH"/>
-                            <constraint firstItem="c2J-FA-Rk7" firstAttribute="top" secondItem="sJq-in-6hy" secondAttribute="bottom" constant="20" id="EYK-rq-n2h"/>
-                            <constraint firstItem="YMr-Yk-ehh" firstAttribute="top" secondItem="Je8-N7-bpP" secondAttribute="bottom" constant="20" id="FLO-7Z-qbN"/>
-                            <constraint firstAttribute="trailing" secondItem="7y1-QI-Iid" secondAttribute="trailing" constant="20" id="FvF-l2-45B"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Je8-N7-bpP" secondAttribute="trailing" constant="20" symbolic="YES" id="Gp2-ej-tvy"/>
-                            <constraint firstItem="7y1-QI-Iid" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Tco-89-feJ"/>
-                            <constraint firstItem="tLO-JJ-PbD" firstAttribute="leading" secondItem="sJq-in-6hy" secondAttribute="leading" id="W4y-Ii-exZ"/>
-                            <constraint firstItem="c2J-FA-Rk7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="XYJ-3J-Ck5"/>
-                            <constraint firstItem="OiM-EA-Iz3" firstAttribute="top" secondItem="c2J-FA-Rk7" secondAttribute="bottom" constant="10" id="Zqe-h5-HUg"/>
-                            <constraint firstAttribute="trailing" secondItem="YMr-Yk-ehh" secondAttribute="trailing" constant="20" id="eTd-KM-4Zq"/>
-                            <constraint firstItem="Je8-N7-bpP" firstAttribute="top" secondItem="u2K-Ju-cjk" secondAttribute="bottom" constant="8" id="hTk-xI-OkY"/>
-                            <constraint firstItem="sJq-in-6hy" firstAttribute="top" secondItem="YMr-Yk-ehh" secondAttribute="bottom" constant="20" id="ipx-n1-zz7"/>
-                            <constraint firstItem="OiM-EA-Iz3" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="51" id="kH9-ti-4rW"/>
-                            <constraint firstAttribute="trailing" secondItem="OiM-EA-Iz3" secondAttribute="trailing" constant="44" id="kdi-0B-sf0"/>
-                            <constraint firstAttribute="trailing" secondItem="CeI-EA-b02" secondAttribute="trailing" constant="20" id="oBL-NC-qdd"/>
-                            <constraint firstItem="CeI-EA-b02" firstAttribute="top" secondItem="OiM-EA-Iz3" secondAttribute="bottom" constant="8" id="oXl-N0-Fg1"/>
-                            <constraint firstAttribute="trailing" secondItem="u2K-Ju-cjk" secondAttribute="trailing" constant="113" id="qvZ-aq-drH"/>
-                            <constraint firstItem="Je8-N7-bpP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="73" id="sT2-3C-aUj"/>
-                            <constraint firstItem="7y1-QI-Iid" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="szn-D7-6I8"/>
-                            <constraint firstItem="tLO-JJ-PbD" firstAttribute="top" secondItem="CeI-EA-b02" secondAttribute="bottom" constant="17" id="tOM-3v-Klj"/>
-                            <constraint firstItem="sJq-in-6hy" firstAttribute="leading" secondItem="Zz7-46-SGH" secondAttribute="leading" id="u0v-C7-abu"/>
-                            <constraint firstAttribute="trailing" secondItem="c2J-FA-Rk7" secondAttribute="trailing" constant="20" id="y5y-7X-Rn7"/>
-                            <constraint firstItem="u2K-Ju-cjk" firstAttribute="top" secondItem="7y1-QI-Iid" secondAttribute="bottom" constant="40" id="zy4-zv-18j"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstDatePicker" destination="Zz7-46-SGH" id="sJV-Ny-wrs"/>
@@ -1027,7 +963,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="qWh-xj-waD"/>
             </objects>
-            <point key="canvasLocation" x="75" y="808.5"/>
+            <point key="canvasLocation" x="75" y="774.5"/>
         </scene>
     </scenes>
 </document>
