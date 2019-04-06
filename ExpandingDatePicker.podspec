@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ExpandingDatePicker'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'A textual date picker that expands to show a graphical calendar view when focued.'
 
   s.description      = <<-DESC
