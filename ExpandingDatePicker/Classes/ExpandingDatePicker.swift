@@ -154,7 +154,7 @@ open class ExpandingDatePicker: NSDatePicker {
             fatalError("ExpandableDatePicker's datePickerMode must be .single")
         }
 
-        if datePickerStyle != .textField && datePickerStyle != .textFieldAndStepper {
+        if datePickerStyle != .textField {
             fatalError("ExpandableDatePicker's datePickerStyle must be .textField")
         }
 

@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ExpandingDatePicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="509"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="402"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <datePicker verticalHuggingPriority="750" id="Zz7-46-SGH" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="163" y="310" width="81" height="22"/>
+                                <rect key="frame" x="163" y="203" width="81" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="BbB-J5-Sco">
                                     <font key="font" metaFont="system"/>
@@ -727,7 +727,7 @@
                                 </connections>
                             </datePicker>
                             <textField verticalHuggingPriority="750" id="Tld-f7-7Ox">
-                                <rect key="frame" x="286" y="310" width="96" height="22"/>
+                                <rect key="frame" x="286" y="203" width="96" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Other Field" drawsBackground="YES" id="lvR-yM-G43">
                                     <font key="font" metaFont="system"/>
@@ -736,11 +736,11 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="37" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="u2K-Ju-cjk">
-                                <rect key="frame" x="20" y="290" width="347" height="22"/>
+                                <rect key="frame" x="20" y="183" width="347" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="7y1-QI-Iid">
-                                <rect key="frame" x="20" y="352" width="440" height="137"/>
+                                <rect key="frame" x="20" y="245" width="440" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="Tgu-FE-OZc">
@@ -795,7 +795,7 @@
                                 </customSpacing>
                             </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Je8-N7-bpP">
-                                <rect key="frame" x="18" y="312" width="144" height="17"/>
+                                <rect key="frame" x="18" y="205" width="144" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Click Here To Test  →" id="Upe-pS-a2m">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -804,7 +804,7 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="YMr-Yk-ehh">
-                                <rect key="frame" x="20" y="248" width="440" height="34"/>
+                                <rect key="frame" x="20" y="141" width="440" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="L0x-In-pdZ">
@@ -825,7 +825,7 @@
                                 </customSpacing>
                             </stackView>
                             <datePicker verticalHuggingPriority="750" id="sJq-in-6hy" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="153" y="209" width="81" height="19"/>
+                                <rect key="frame" x="153" y="102" width="81" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="CzF-hd-Y83">
                                     <font key="font" metaFont="smallSystem"/>
@@ -839,89 +839,14 @@
                                     <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="VaO-Xh-ids"/>
                                 </connections>
                             </datePicker>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="c2J-FA-Rk7">
-                                <rect key="frame" x="20" y="155" width="440" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="4Mm-WI-ZcS">
-                                        <rect key="frame" x="-2" y="0.0" width="444" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" selectable="YES" title="5. Should still work if mode is .textFieldAndStepper.  Date text should not jump around on expansion." id="v9D-Tv-IeC">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <customView id="OiM-EA-Iz3">
-                                <rect key="frame" x="51" y="95" width="385" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <datePicker verticalHuggingPriority="1000" id="B07-7h-oso" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                        <rect key="frame" x="0.0" y="7" width="107" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="xWb-4s-DXW">
-                                            <font key="font" metaFont="system"/>
-                                            <date key="date" timeIntervalSinceReferenceDate="-595929600">
-                                                <!--1982-02-12 16:00:00 +0000-->
-                                            </date>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        </datePickerCell>
-                                        <connections>
-                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="sxk-jW-wIk"/>
-                                        </connections>
-                                    </datePicker>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mKe-A1-1is">
-                                        <rect key="frame" x="0.0" y="33" width="74" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="with Border" id="eSr-gz-nib">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2nU-Cj-Z1F">
-                                        <rect key="frame" x="182" y="33" width="94" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="without Border" id="RE9-qd-pVT">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <datePicker verticalHuggingPriority="750" id="vbA-TZ-6Ld" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                        <rect key="frame" x="184" y="7" width="107" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <datePickerCell key="cell" alignment="left" drawsBackground="NO" id="On6-Qa-Ktn">
-                                            <font key="font" metaFont="system"/>
-                                            <date key="date" timeIntervalSinceReferenceDate="-595929600">
-                                                <!--1982-02-12 16:00:00 +0000-->
-                                            </date>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        </datePickerCell>
-                                        <connections>
-                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.date" id="B7Z-5i-93j"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                            </customView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="CeI-EA-b02">
-                                <rect key="frame" x="20" y="70" width="440" height="17"/>
+                                <rect key="frame" x="20" y="63" width="440" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="neW-p9-qXL">
                                         <rect key="frame" x="-2" y="0.0" width="343" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" selectable="YES" title="6. If control is diabled, clicking into it should do nothing." id="O4v-EE-GdL">
+                                        <textFieldCell key="cell" selectable="YES" title="5. If control is diabled, clicking into it should do nothing." id="O4v-EE-GdL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -936,7 +861,7 @@
                                 </customSpacing>
                             </stackView>
                             <datePicker verticalHuggingPriority="750" id="tLO-JJ-PbD" customClass="ExpandingDatePicker" customModule="ExpandingDatePicker">
-                                <rect key="frame" x="153" y="31" width="100" height="22"/>
+                                <rect key="frame" x="153" y="27" width="100" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" enabled="NO" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="HDK-dc-fqc">
                                     <font key="font" metaFont="system"/>
@@ -963,7 +888,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="qWh-xj-waD"/>
             </objects>
-            <point key="canvasLocation" x="75" y="774.5"/>
+            <point key="canvasLocation" x="75" y="721"/>
         </scene>
     </scenes>
 </document>
