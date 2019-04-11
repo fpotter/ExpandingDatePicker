@@ -22,7 +22,7 @@ pod 'ExpandingDatePicker'
 
 ## Usage (Programmatic)
 
-`ExpandingDatePicker` extends `NSDatePicker` so the API is the same.  Only catch is that it only works for year/month/day elements, in single picker mode, and in textField or textFieldWithStepper styles.
+`ExpandingDatePicker` extends `NSDatePicker` so the API is the same.  Only catch is that it only works for year/month/day elements, in single picker mode and in the `textField` style.
 
 ```swift
 import ExpandingDatePicker
