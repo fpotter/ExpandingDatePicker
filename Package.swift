@@ -3,11 +3,13 @@
 import PackageDescription
 
 let package = Package(
-  name: "ExpandingDatePicker",
-  products: [
-    .library(name: "ExpandingDatePicker", targets: ["ExpandingDatePicker"])
-  ],
-  targets: [
-    .target(name: "ExpandingDatePicker", path: "ExpandingDatePicker")
-  ]
-)
+    name: "ExpandingDatePicker",
+    platforms: [
+        .macOS(.v10_10)
+    ],
+    products: [
+        .library(name: "ExpandingDatePicker", targets: ["ExpandingDatePicker"])
+    ],
+    targets: [
+        .target(name: "ExpandingDatePicker", path: "ExpandingDatePicker")
+    ])
