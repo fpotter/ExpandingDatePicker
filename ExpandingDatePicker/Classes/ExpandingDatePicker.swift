@@ -158,8 +158,8 @@ open class ExpandingDatePicker: NSDatePicker {
             fatalError("ExpandableDatePicker's datePickerStyle must be .textField")
         }
 
-        if datePickerElements != [.yearMonthDay] {
-            fatalError("ExpandableDatePicker's datePickerElements must be [.yearMonthDay]")
+        if datePickerElements != [.yearMonthDay] && datePickerElements != [.yearMonth, .yearMonthDay, .era] {
+            fatalError("ExpandableDatePicker's datePickerElements must be [.yearMonthDay] or [.yearMonthDay, .era]")
         }
     }
 }
